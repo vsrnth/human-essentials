@@ -1,11 +1,12 @@
 name: Generate PlantUML
-on: push
-  paths:
-    - 'doc/**'
-    - '*.md'
-  pull_request:
-    - 'doc/**'
-    - '*.md'
+on:
+  push:
+    paths:
+      - 'doc/**'
+      - '*.md'
+    pull_request:
+      - 'doc/**'
+      - '*.md'
 
 jobs:
   generate_plantuml:
