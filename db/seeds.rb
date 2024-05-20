@@ -288,8 +288,8 @@ note = [
     family.home_child_count.times do
       Partners::Child.create!(
         family: family,
-        first_name: family.guardian_first_name,
-        last_name: family.guardian_last_name,
+        first_name: Faker::Name.first_name,
+        last_name: Faker::Name.last_name,
         date_of_birth: Faker::Date.birthday(min_age: 5, max_age: 18),
         gender: Faker::Gender.binary_type,
         child_lives_with: Partners::Child::CAN_LIVE_WITH.sample(2),
@@ -306,8 +306,8 @@ note = [
     family.home_young_child_count.times do
       Partners::Child.create!(
         family: family,
-        first_name: family.guardian_first_name,
-        last_name: family.guardian_last_name,
+        first_name: Faker::Name.first_name,
+        last_name: Faker::Name.last_name,
         date_of_birth: Faker::Date.birthday(min_age: 0, max_age: 5),
         gender: Faker::Gender.binary_type,
         child_lives_with: Partners::Child::CAN_LIVE_WITH.sample(2),
